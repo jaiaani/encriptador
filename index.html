@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript" defer></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <h1>Encriptador de Mensagens</h1>
+    </header>
+    <main>
+        <form>
+            <h2>Escreva sua mensagem</h2>
+
+            <textarea type="text" name="msg" id="msg" placeholder="Digite aqui!"></textarea>
+
+            <div class="options">
+                <label>Selecione o tipo de criptografia</label>
+                <select  name="optionsBox" id="optionsBox">
+                    <option value="">Selecione</option>
+                    <option value="base64">Base64</option>
+                    <option value="cifraCesar">Cifra de Cesar</option> 
+                </select> 
+            </div>
+
+
+            <div class="incrementador">
+                    <label>Selecione a cifra</label><br>
+                    <input id="cifra" type="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
+                    <output>10</output>
+            </div>
+
+            <div>
+                <label for="codifica">Codificar</label>
+                <input  type="radio" name="rodar" value= "codifica" id="codifica" checked>
+                <label for="decodifica">Decodificar</label> 
+                <input type="radio" name="rodar" value= "decodifica" id="decodifica">
+            </div>
+            <input type="submit" value="Codificar" class="button"><br>
+            <textarea name="" class="text" cols="30" rows="10" readonly></textarea>
+            
+        </form>
+    </main>
+    <footer>
+        <p>Feito por Jaiane Guimaraes &#128152; </p>
+    </footer>
+</body>
+</html>
